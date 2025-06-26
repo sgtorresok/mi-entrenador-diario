@@ -1,0 +1,1 @@
+Este es el proyecto final de la app Entrenador Espartano con desafío de 30 días.
