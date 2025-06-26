@@ -5,7 +5,7 @@ const frases = [
   "Hoy es un buen día para superarte.",
   "El esfuerzo de hoy es el resultado de mañana.",
   "No se trata de ser el mejor, sino de ser mejor que ayer.",
-  "Cuando tengas ganas de rendirte, recuerda por qué empezaste."
+  "Cuando tengas ganas de rendirte, recordá por qué empezaste."
 ];
 
 const rutinas = {
@@ -42,35 +42,22 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: 20, fontFamily: "sans-serif", background: "#121212", color: "#fff" }}>
+    <div style={{ padding: 20 }}>
       <h1>Mi Entrenador Diario</h1>
-
       <section>
         <h2>Frase del día</h2>
         <p><em>{frase}</em></p>
       </section>
-
       <section>
         <h2>Rutina de hoy ({diaHoy})</h2>
         <p>{rutinas[diaHoy]}</p>
       </section>
-
-      <section>
-        <h2>Temporizador HIIT (30s)</h2>
-        <p>[Temporizador aún no integrado en esta versión básica]</p>
-      </section>
-
       <section>
         <h2>¿Entrenaste hoy?</h2>
-        <button
-          onClick={marcarCompletado}
-          disabled={completado}
-          style={{ background: "#00c853", padding: 10, color: "#fff", border: "none" }}
-        >
+        <button onClick={marcarCompletado} disabled={completado}>
           {completado ? "✔ Entrenamiento Completado" : "Marcar como Completado"}
         </button>
       </section>
-
       <section>
         <h2>Historial Semanal</h2>
         <ul>
